@@ -12,8 +12,7 @@ def index():
     output = request.args.get('output')
     if not output:
         output = PLAIN
-    return get_formatted(msg, moje_imie,
-                         JSON)
+    return get_formatted(msg, moje_imie, format=JSON)
 
 @app.route('/outputs')
 def supported_output():
