@@ -5,6 +5,7 @@ from flask import request
 
 moje_imie = "Grzegorz"
 msg = "Hello World!"
+JSON = "json"
 
 @app.route('/')
 def index():
@@ -12,7 +13,7 @@ def index():
     if not output:
         output = PLAIN
     return get_formatted(msg, moje_imie,
-                         output.lower())
+                         JSON)
 
 @app.route('/outputs')
 def supported_output():
